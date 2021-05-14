@@ -1,0 +1,316 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #194350;
+}
+/* form1 */
+form {
+  background-image: linear-gradient(#ff8882, pink);
+  width: 60%;
+  margin: 10vh auto;
+  height: 80vh;
+  border-radius: 20px;
+  color: #124352;
+}
+
+.form1-container,
+.form2-container,
+.form3-container {
+  display: flex;
+}
+
+/* form1-col1 */
+.form1-col1,
+.form2-col1,
+.form3-col1 {
+  height: 80vh;
+  width: 35%;
+  border-radius: 15px;
+}
+
+.form1-col1 img,
+.form2-col1 img,
+.form3-col1 img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+/* .form1-col2 */
+
+.form1-col2,
+.form3-col2 {
+  background-color: #ff8882;
+  padding: 15px;
+  height: 80vh;
+  width: 65%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+p {
+  font-size: 1.2rem;
+  padding-top: 10px;
+}
+input {
+  font-size: 1rem;
+  padding: 3px;
+  outline: none;
+}
+
+.form1-name-inputs,
+.form1-add-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  gap: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  background-color: #ffc2b4;
+  border: none;
+  color: #194350;
+}
+
+.form1-name-inputs p {
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+select {
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* phone */
+.form1-phone {
+  display: grid;
+  grid-template-areas: ".5fr 2fr .";
+  gap: 5px;
+}
+
+.form1-input-e {
+  width: 50%;
+}
+
+.form1-add-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.form1-add-inputs p,
+.form1-add-inputs2 p {
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.form1-add-inputs2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 10px 35px;
+  outline: none;
+  border: 2px solid pink;
+  background-color: #ff8882;
+  color: pink;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+button:hover {
+  border: 2px solid white;
+  background-color: #ff8882;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+/* form2  */
+
+.form2-name-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  gap: 5px;
+}
+
+.form2-col2 {
+  background-color: #ff8882;
+  padding: 15px;
+  height: 80vh;
+  width: 65%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  text-transform: capitalize;
+  /* display: flex;
+  flex-direction: column; */
+}
+.pet-info {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px; */
+}
+
+.form2-col2 input[type="radio"] {
+  display: none;
+}
+.genders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.form2-col2 label {
+  background-color: #ffc2b4;
+  border: 2px solid #194350;
+  color: #194350;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form2-col2 input[type="radio"]:checked + label {
+  background-color: #194350;
+  color: #ff8882;
+  transition: all 0.3s linear;
+}
+
+.pet-info div:last-child p {
+  padding-bottom: 6px;
+}
+
+.pet-name,
+.pet-breed {
+  width: 100%;
+}
+
+.back,
+.back2 {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 10px 35px;
+  outline: none;
+  border: 2px solid pink;
+  background-color: #ff8882;
+  color: pink;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.form2 {
+  display: none;
+}
+
+.form2-name-inputs2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.bday {
+  padding: 4px;
+}
+/* form 3 */
+
+.form3-name-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  gap: 5px;
+}
+
+.form3 {
+  display: none;
+}
+
+.submit {
+  padding: 10px 28px;
+}
+
+/* inputs */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type="text"] {
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 800px) {
+  .bday {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* body {
+    display: none;
+  } */
+  .form1-name-inputs p {
+    font-size: 0.7rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .form1-col1,
+  .form2-col1,
+  .form3-col1 {
+    width: 40%;
+  }
+  .form2-col2 {
+    width: 60%;
+  }
+  form {
+    width: 90%;
+    /* height: 50vh; */
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .bday {
+    width: 70%;
+  }
+  button,
+  .back,
+  .back2,
+  .submit {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 5px 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bday {
+    width: 60%;
+  }
+}

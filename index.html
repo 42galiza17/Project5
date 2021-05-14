@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- add -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+               event.preventDefault()
+            $.ajax({
+                
+                url: 'https://api.apispreadsheets.com/data/11984/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Your data has been submitted")
+
+
+                },
+                error: function () {
+                    alert("There was an error")
+                }
+                
+            });
+        };
+    
+        
+    </script>
+
+    <!-- add -->
+</head>
+
+<body>
+    <!-- form1 -->
+    <form action="" id="myForm">
+        <div class="form1">
+            <div class="form1-container">
+                <div class="form1-col1">
+                    <img src="images/cat.jpg" alt="">
+
+                </div> 
+                <div class="form1-col2">
+                    <h2>Owner Information</h2>
+                    <p>Name</p>
+                    <div class="form1-name-inputs">
+                        <input type="text" name="Owner_Last_Name" required>
+                        <input type="text" name="Owner_First_Name" required>
+                        <input type="text" name="Owner_Middle_Name" required>
+                        <p class="f1-input1 ofn">last name</p>
+                        <p class="f1-input2 ofn">first name</p>
+                        <p class="f1-input3 ofn">middle name</p>
+                    </div>
+
+                    <!-- phone -->
+                    <p>phone number</p>
+                    <div class="form1-phone">
+                    <select name="Area_Code" id="tel">
+                            <option value="(Brazil) 55">(Brazil) 55</option>
+                            <option value="(Cambodia) 85">(Cambodia) 855</option>
+                            <option value="(China) 86">(China) 86</option>
+                            <option value="(France) 33">(France) 33</option>
+                            <option value="(Japan) 81">(Japan) 81</option>
+                            <option value="(Philippines) 63">(Philippines) 63</option>
+                            <option value="(Mexico) 52">(Mexico) 52</option>
+                            <option value="(Ukraine) 380">(Ukraine) 380</option>
+                            <option value="(Vietnam) 84">(Vietnam) 84</option>
+                    </select>
+                    <input type="number" name="Owner_Telephone_Number" maxlength="10">
+                    </div>
+
+                    <!-- email -->
+                    <p>email</p>
+                    <input type="email" class="form1-input-e" name="Email" required>
+
+                    <!-- address -->
+                    <p>address</p>
+                    <div class="form1-add-inputs">
+                        <input type="text" name="Street" >
+                        <input type="text" name="City" >
+                        <input type="number" name="Postal" maxlength="4">
+                        <p>street</p>
+                        <p>city</p>
+                        <p>postal/zip code</p>
+                    </div><br>
+                    <div class="form1-add-inputs2">
+                        <input type="text" name="State">
+                        <input type="text" name="Country" >
+                        <p>province/State</p>
+                        <p>country</p>
+                    </div>
+                    <button class="next">next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form2">
+            <div class="form2-container">
+                <div class="form2-col1">
+                    <img src="images/dog2.jpg" alt="">
+                </div>
+                <div class="form2-col2">
+                    <h2>Pet Information</h2>
+                    <div class="pet-info">
+                   
+                        <div class="form2-name-inputs">  
+                            <p class="f1-input1">pet name</p>
+                            <p class="f1-input2">breed</p>
+                            <input type="text" name="Pet_name">
+                            <input type="text" name="Breed">
+                        
+                        </div>
+                        <div class="form2-name-inputs2">
+                            <div>
+                                <p>gender</p>
+                                <div class="genders" name="Pet Gender">
+                                    <input type="radio" id="male" name="Gender" value="male">
+                                    <label for="male" name="">Male</label>
+                                    <input type="radio" id="female" name="Gender" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                            <div>
+                                <p>birthday</p>
+                                <input class="bday" type="date" name="Pet_birthday" value="date">
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- phone -->
+                    <br>
+                    <h2>Emergency Contact</h2>
+                    <p>Name</p>
+                    <div class="form1-name-inputs">
+                        <input type="text" class="form1-input1" name="EC_Last_Name">
+                        <input type="text" class="form1-input2" name="EC_First_Name">
+                        <input type="text" class="form1-input3" name="EC_Middle_Name">
+                        <p class="f1-input1">last name</p>
+                        <p class="f1-input2">first name</p>
+                        <p class="f1-input3">middle name</p>
+                    </div>
+                    <p>phone number</p>
+                    <div class="form1-phone">
+                        <select name="EC_Area_Code" id="tel2">
+                            <option value="(Brazil) 55">(Brazil) 55</option>
+                            <option value="(Cambodia) 85">(Cambodia) 855</option>
+                            <option value="(China) 86">(China) 86</option>
+                            <option value="(France) 33">(France) 33</option>
+                            <option value="(Japan) 81">(Japan) 81</option>
+                            <option value="(Philippines) 63">(Philippines) 63</option>
+                            <option value="(Mexico) 52">(Mexico) 52</option>
+                            <option value="(Ukraine) 380">(Ukraine) 380</option>
+                            <option value="(Vietnam) 84">(Vietnam) 84</option>
+                        </select>
+                        <input type="text" name="EC_Telephone" maxlength="10">
+                    </div>
+                    <button class="back">Back</button>
+                    <button class="next2">next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- form3 -->
+        <div class="form3">
+            <div class="form3-container">
+                <div class="form3-col1">
+                    <img src="images/dog.jpg" alt="">
+                </div>
+                <div class="form3-col2">
+                    <h2>Veterinarian Record</h2>
+                    <div class="form3-name-inputs">
+                        <p>Distemper Due</p>
+                        <p>Rabies Due</p>
+                        <p>Bordatella Due</p>
+                        <input type="text" name="Distemper_Due">
+                        <input type="text" name="Rabies_Due">
+                        <input type="text" name="Bordatella_Due">
+                    </div>
+                    <p>Veterinarian's Name</p>
+                    <div class="form1-name-inputs">
+                        <input type="text" name="Vet_Last_Name" required>
+                        <input type="text" name="Vet_First_Name" required>
+                        <input type="text" name="Vet_Middle_Name" required>
+                        <p>last name</p>
+                        <p>first name</p>
+                        <p>middle name</p>
+                    </div>
+        
+                    <p>address</p>
+                    <div class="form1-add-inputs">
+                        <input type="text" name="Vet_Address_Street">
+                        <input type="text" name="Vet_Address_City">
+                        <input type="number" name="Vet_Address_Postal" maxlength="4">
+                        <p>street</p>
+                        <p>city</p>
+                        <p>postal/zip code</p>
+                    </div><br>
+                    <div class="form1-add-inputs2">
+                        <input type="text" name="Vet_Address_State">
+                        <input type="text" name="Vet_Address_Country">
+                        <p>State/Province</p>
+                        <p>country</p>
+                    </div>
+                    
+                    
+                    <button class="back2">Back</button>   
+                    <button class="submit" onclick="SubForm()">Submit</button>
+                        
+                </div>
+        
+            </div>
+        </div>
+    </form>
+  
+    <script src="app.js"></script>
+</body>
+
+</html>
